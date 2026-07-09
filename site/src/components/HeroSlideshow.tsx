@@ -47,8 +47,9 @@ export default function HeroSlideshow() {
         ))}
       </div>
 
-      {/* Slide indicators */}
-      <div className="absolute bottom-28 right-6 z-20 flex items-center gap-2.5 lg:right-10">
+      {/* Slide indicators — hidden on phones where the hero foot is busy;
+          the slideshow still auto-advances there */}
+      <div className="absolute bottom-28 right-6 z-20 hidden items-center gap-2.5 sm:flex lg:right-10">
         {SLIDES.map((s, i) => (
           <button
             key={s.src}

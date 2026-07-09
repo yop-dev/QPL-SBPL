@@ -22,17 +22,18 @@ export default function Nav() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-10">
-        <a href="#top" className="flex items-center gap-2.5" aria-label="Quezon Power home">
+        <a href="#top" className="flex min-w-0 items-center gap-2.5" aria-label="Quezon Power home">
           {/* Their real logo mark, clipped from the official lockup */}
-          <span className="block h-8 w-[34px] shrink-0 overflow-hidden">
+          <span className="block h-8 w-[29px] shrink-0 overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/img/qpl-logo.png" alt="Quezon Power" className="h-8 w-auto max-w-none" />
           </span>
           <span className="flex flex-col leading-none">
-            <span className="font-display text-sm font-extrabold uppercase tracking-[0.18em] text-mist">
+            <span className="whitespace-nowrap font-display text-sm font-extrabold uppercase tracking-[0.12em] text-mist sm:tracking-[0.18em]">
               Quezon <span className="text-grid">Power</span>
             </span>
-            <span className="mt-1 font-mono text-[0.55rem] uppercase tracking-[0.16em] text-muted">
+            {/* Legal line appears once there's room for it */}
+            <span className="mt-1 hidden whitespace-nowrap font-mono text-[0.55rem] uppercase tracking-[0.16em] text-muted sm:block">
               (Philippines), Limited Co.
             </span>
           </span>
@@ -52,7 +53,7 @@ export default function Nav() {
 
         <a
           href="#contact"
-          className="group flex items-center gap-2 border border-line px-4 py-2 font-mono text-[0.7rem] uppercase tracking-[0.18em] text-mist transition-colors hover:border-amber hover:text-amber"
+          className="group flex shrink-0 items-center gap-2 whitespace-nowrap border border-line px-3 py-2 font-mono text-[0.65rem] uppercase tracking-[0.14em] text-mist transition-colors hover:border-amber hover:text-amber sm:px-4 sm:text-[0.7rem] sm:tracking-[0.18em]"
         >
           Get in touch
           <span className="transition-transform group-hover:translate-x-0.5">→</span>

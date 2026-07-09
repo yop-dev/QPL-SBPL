@@ -78,8 +78,8 @@ export default function Hero() {
           className="mt-9 grid max-w-2xl grid-cols-3 divide-x divide-line border-y border-line"
         >
           {heroStats.map((s) => (
-            <div key={s.label} className="px-4 py-5 first:pl-0">
-              <div className="font-display text-3xl font-extrabold text-mist sm:text-4xl">
+            <div key={s.label} className="px-3 py-5 first:pl-0 sm:px-4">
+              <div className="font-display text-2xl font-extrabold text-mist sm:text-4xl">
                 {s.prefix ? (
                   <>
                     {s.prefix}
