@@ -115,7 +115,7 @@ export const csrPrograms = [
   {
     title: "Livelihood",
     img: "/img/csr-livelihood.jpg",
-    body: "Entrepreneurial and leadership training for farmers, fisher folk, women and youth, and microentrepreneur loans through the ABS-CBN Bayan Foundation — repaid in full.",
+    body: "Entrepreneurial and leadership skills training for micro-entrepreneurs, cooperatives and NGOs, plus microentrepreneur loans through the ABS-CBN Bayan Foundation — repaid in full.",
   },
   {
     title: "Environment",
@@ -125,7 +125,7 @@ export const csrPrograms = [
   {
     title: "Host community",
     img: "/img/csr-host.jpg",
-    body: "Under DOE ER 1-94: roads and pathways, bridges, spillways and irrigation, water systems, public markets, schools and day-care centers.",
+    body: "Under DOE Energy Regulation 1-94: funds for Mauban's electrification, development and livelihood — including reforestation and watershed management.",
   },
 ];
 
