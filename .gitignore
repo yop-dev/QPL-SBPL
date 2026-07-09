@@ -1,0 +1,24 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.*
+
+# next.js / build output
+.next/
+out/
+build/
+*.tsbuildinfo
+
+# dev-only QA artifacts (Puppeteer screenshots & one-off preview scripts)
+site/scripts/shots/
+site/scripts/logo-preview.png
+
+# env & secrets
+.env*
+.vercel
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.pem
+npm-debug.log*
