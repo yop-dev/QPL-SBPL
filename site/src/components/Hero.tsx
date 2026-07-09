@@ -98,11 +98,14 @@ export default function Hero() {
       {/* Signature: the live 60 Hz grid waveform, pinned to the bottom edge */}
       <div className="absolute inset-x-0 bottom-0 z-10 border-t border-line/60 bg-ink/50 backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl items-center gap-4 px-6 py-3 lg:px-10">
-          <span className="flex items-center gap-2 whitespace-nowrap font-mono text-[0.65rem] uppercase tracking-[0.2em] text-signal">
+          <span className="z-10 flex items-center gap-2 whitespace-nowrap font-mono text-[0.65rem] uppercase tracking-[0.2em] text-signal">
             <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-signal" />
             Grid live · 60 Hz
           </span>
-          <Waveform className="flex-1" height={44} />
+          {/* Clip + fade the wave in from the left so it never overlaps the label */}
+          <div className="relative flex-1 overflow-hidden [-webkit-mask-image:linear-gradient(to_right,transparent,#000_3rem)] [mask-image:linear-gradient(to_right,transparent,#000_3rem)]">
+            <Waveform className="w-full" height={44} />
+          </div>
         </div>
       </div>
     </section>
