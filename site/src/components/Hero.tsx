@@ -55,7 +55,7 @@ export default function Hero() {
           animate="show"
           className="max-w-4xl text-[clamp(2.5rem,7vw,5.25rem)] font-black uppercase text-mist"
         >
-          Baseload power for the <span className="text-amber">Luzon grid</span>.
+          Stable, reliable power for the <span className="text-amber">Luzon grid</span>.
         </motion.h1>
 
         <motion.p
