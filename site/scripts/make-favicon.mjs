@@ -10,15 +10,17 @@ const markSvg = readFileSync(VEC + "/logo-mark.svg", "utf8");
 const ds = [...markSvg.matchAll(/ d="([^"]+)"/g)].map((m) => m[1]);
 const [dropD, ribbonD] = ds;
 
-// Compose the favicon: dark brand tile + bright mark (reads on any tab).
-const S = 512;
-const markH = 344, markW = (640 / 896) * markH; // mark viewBox is 640x896
-const tx = (S - markW) / 2, ty = (S - markH) / 2, scale = markH / 896;
+// Compose the favicon: just the mark, transparent background.
+// The ribbon is the authentic charcoal on light tabs, and swaps to light on
+// dark tabs (SVG prefers-color-scheme) so it never disappears.
+const S = 960;
+const markW = 640, markH = 896; // mark's own viewBox
+const tx = (S - markW) / 2, ty = (S - markH) / 2;
 const icon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${S} ${S}">
-  <rect width="${S}" height="${S}" rx="112" fill="#0a0e16"/>
-  <g transform="translate(${tx.toFixed(1)} ${ty}) scale(${scale.toFixed(4)})">
-    <path d="${dropD}" fill="#2b9ae6"/>
-    <path d="${ribbonD}" fill="#e9edf3"/>
+  <style>.qp-ribbon{fill:#303030}@media (prefers-color-scheme:dark){.qp-ribbon{fill:#e9edf3}}</style>
+  <g transform="translate(${tx} ${ty})">
+    <path d="${dropD}" fill="#0070c0"/>
+    <path d="${ribbonD}" class="qp-ribbon"/>
   </g>
 </svg>`;
 writeFileSync(`${APP}/icon.svg`, icon);
