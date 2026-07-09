@@ -22,3 +22,6 @@ site/scripts/logo-preview.png
 Thumbs.db
 *.pem
 npm-debug.log*
+
+# personal / not for the public repo
+email-draft.md
